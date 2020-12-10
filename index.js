@@ -107,4 +107,4 @@ try {
 }
 });
 
-bot.login(token);
+bot.login("NzE5MjU4ODIyMjQxNDE5MzQ0.Xt04hA.f24ggB2K1Whc3LMNxvSNhAcCUSY");
