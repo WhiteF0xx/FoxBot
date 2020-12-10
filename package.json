@@ -1,0 +1,20 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wfox",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "discord.js-reaction-menu": "^1.0.2",
+    "discordjs-colors": "^1.2.3",
+    "got": "^11.3.0",
+    "nhentai-api": "^3.0.2",
+    "nhentai-js": "^3.3.0",
+    "weather-js": "^2.0.0"
+  }
+}

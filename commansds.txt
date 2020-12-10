@@ -1,0 +1,61 @@
+switch(args[0].toLowerCase()){
+        case 'ping':
+            message.channel.send(`?? **Pong!**\n**Latency:** ${Math.floor(message.createdAt - message.createdAt)}ms\n**API Latency:** ${Math.round(bot.ws.ping)}ms`);
+            break;
+    
+        case 'info':
+            if(args[1] === 'version'){
+                message.channel.send('**Version** ' + version);
+            }else{ 
+                message.channel.send('Invalid Command')
+            }
+        break;
+        case 'hello':
+            client.commands.get('hello').execute(message, args);
+            break;
+        case 'prune':
+            if(!args[1]) return message.reply('Please define how many messages you want to clear.')
+            if(isNaN(args[1])) return message.channel.send("Please input a valid number.").then(d => d.delete({timeout: 6000})) // isNaN = is Not a Number. (case sensitive, write it right)
+            if (args[1] < 1) return message.channel.send("Insert the number more than 0.")
+            message.delete()
+            message.channel.bulkDelete(args[1]);
+            message.channel.send(`Deleted **${args[1]}** messages!`).then(d => d.delete({timeout: 6000})) // How long this message will be deleted in ms. 
+            .then(messages => message.channel.send)
+            .catch(() =>message.channel.send(`Something went wrong, while deleting messages.`)) // This error will displayd when the bot doesn't have an accsess to do it.
+            break;
+        case 'beep':
+            client.commands.get('beep').execute(message, args);
+            break;
+        case 'server':
+            // Channels
+            let text = bot.channels.cache.filter(r => r.type === `text`).size ,
+                vc = bot.channels.cache.filter(r => r.type === `voice`).size ,
+                category = bot.channels.cache.filter(r => r.type === `category`).size;
+
+            const embed = new MessageEmbed()
+            .setColor(0x82eb11)
+            .setTitle(`ID: ${message.guild.id}`)
+            .setThumbnail(message.guild.iconURL())
+            .setAuthor(`${message.guild.name}`, message.guild.iconURL())
+            .addField(`**Region:**`, `${message.guild.region}`, true)
+            .addField(`**Shard:**`, `${message.guild.shardID}`, true)
+            .addField(`**Members:**`, `${message.guild.memberCount}`, true)
+            .addField(`Channels: [${message.guild.channels.cache.size}]`,`**Category:** ${category} | :hash: **Text:** ${text} | :sound: **Voice:** ${vc}` ,true)
+            .addField("Server Owner", `:crown: ${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}| ${message.guild.owner}` , true)
+            .setFooter(`FoxBot | 7/6/20`, bot.user.displayAvatarURL());
+            message.channel.send(embed);
+            break;   
+        case 'test':
+            const iembed = new MessageEmbed()
+            .setColor(0x82eb11)
+            .setTitle(`ID: ${message.guild.id}`)
+            .setThumbnail(message.guild.iconURL())
+            .setAuthor(`${message.guild.name}`, message.guild.iconURL())
+            .addField(`**Region:**`, `${message.guild.region}`, true)
+            .addField(`**Shard:**`, `${message.guild.shardID}`, true)
+            .addField(`**Members:**`, `${message.guild.memberCount}`, true)
+            .addField("Server Owner", `:crown: ${message.guild.owner.user.username}#${message.guild.owner.user.discriminator} | ${message.guild.owner}` , true)
+            .setFooter(`FoxBot | 7/6/20`, bot.user.displayAvatarURL());
+            message.channel.send(iembed);
+            break;
+        
