@@ -1,7 +1,7 @@
 module.exports = {
     name:'avatar',
     description: 'Gets the avatar of a user.',
-    alliases: ['profile','pic'],
+    aliases: ['profile','pic'],
     args: true,
     usage: '@[user] <size>',
     example: '&avatar @FoxBot small',
