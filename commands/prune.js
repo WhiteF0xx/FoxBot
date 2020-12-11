@@ -3,7 +3,7 @@
 module.exports = {
     name:`prune`,
     description: `Deletes messages.`,
-    alliases:['delete','del'],
+    aliases:['delete','del'],
     cooldown: 5,
     //usage: `${prefix}prune [number]`,
     //example: `${prefix}prune 10`,
