@@ -1,5 +1,5 @@
 //const { prefix } = require('../config.json')
-// const { command } = require('../commands')
+//const { command } = require('../commands')
 
 module.exports = {
     name:`info`,
@@ -12,12 +12,12 @@ module.exports = {
 
         let version = '1.4';
 
-        if (args[1] === 'version' || 'ver'){
+        if (args[0] === 'version'){
             message.channel.send('**Version** ' + version);
         }
         else {
-            // message.channel.send(`Argument "${args[0]}" is wrong.
-            // Try \`${prefix}${this.name} ${this.usage}\``)
+            //  message.channel.send(`Argument "${args[0]}" is wrong.
+            //  Try \`${prefix}${this.name} ${this.usage}\``)
             message.channel.send('**Invalid command.**')
         }
 
