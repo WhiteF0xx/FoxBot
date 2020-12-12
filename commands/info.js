@@ -12,7 +12,7 @@ module.exports = {
 
         let version = '1.4';
 
-        if (args[0] === 'version' || 'ver'){
+        if (args[0] === 'version' ||  args[0] === 'ver'){
             message.channel.send('**Version** ' + version);
         }
         else {
