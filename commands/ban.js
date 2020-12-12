@@ -9,6 +9,9 @@ module.exports = {
             memberTarget.ban();
             message.channel.send(`**User has been banned.**`);
          }
+         else if (member === bot.client) {
+            message.channel.send(`*You can't ban me silly goose.*`).then(d => d.delete({timeout: 5000}));
+         }
          else {
             message.channel.send(`You can't ban that member.`).then(d => d.delete({timeout: 5000}));
          }
