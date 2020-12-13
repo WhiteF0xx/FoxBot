@@ -1,9 +1,10 @@
 const fs = require('fs')
+const {prefix} = require('../config.json')
 
 module.exports = {
     name: "help",
-    description: "Show a command list.",
-    aliases: ['commands'],
+    description:'A list with all the commands.',
+    aliases: ['commands','cmds'],
     cooldown: 5, 
     args: false,
     usage: '[command name]',
@@ -16,9 +17,9 @@ module.exports = {
 
 		for (const file of commandFiles) {
 			const command = require(`./${file}`);
-			str += `__**Name:**__ ${command.name}, __**Description:**__ *${command.description}* \n`;
+			str += `**${prefix}${command.name}** - ${command.description} \n`;
 		}
-
-		message.channel.send(str);
+		
+		message.channel.send(`**These are my commands:** \n\n${str}`);
 	},
 };
