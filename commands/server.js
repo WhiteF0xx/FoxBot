@@ -9,7 +9,7 @@ module.exports = {
             const category = bot.channels.cache.filter(r => r.type === `category`).size;
 
             const embed = new Discord.MessageEmbed()
-            .setColor(0x82eb11)
+            .setColor(`#80007D`)
             .setTitle(`ID: ${message.guild.id}`)
             .setThumbnail(message.guild.iconURL())
             .setAuthor(`${message.guild.name}`, message.guild.iconURL())
