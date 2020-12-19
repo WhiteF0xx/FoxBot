@@ -1,6 +1,6 @@
 module.exports = {
     name:'ban',
-    description:`Bans a member on the server.`,
+    description:`Ban a member on the server.`,
     usage:`[member] <reason>`,
     args: true,
     cooldown: 5,
