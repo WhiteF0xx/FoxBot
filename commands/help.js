@@ -7,8 +7,10 @@ module.exports = {
     cooldown: 5,
 
     execute(message,args,Discord,bot) {
+	 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
-		let embed = new Discord.MessageEmbed()
+
+	let embed = new Discord.MessageEmbed()
         .setAuthor(`FoxBot's Help Menu`, bot.user.displayAvatarURL())
         .setTitle(`***These are my commands***`)
         .setThumbnail(`https://i.imgur.com/cSRX9zV.gif`)
