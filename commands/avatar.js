@@ -23,7 +23,7 @@ module.exports = {
 
         let Embed = new Discord.MessageEmbed()
             .setTitle(`**${user.username}**'s avatar`)
-            .setColor(0x82eb11)
+            .setColor(`#80007D`)
             .setImage(user.displayAvatarURL({size: +sz}))
         message.channel.send(Embed);
     }
