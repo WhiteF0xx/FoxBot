@@ -1,6 +1,6 @@
 module.exports = {
     name:'kick',
-    description:`Kicks a member on the server.`,
+    description:`Kick a member on the server.`,
     usage:`[member] <reason>`,
     args: true,
     cooldown: 5,
