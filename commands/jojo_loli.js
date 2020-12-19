@@ -6,6 +6,7 @@ module.exports = {
     execute(message,args,Discord,bot) {
 
         const embed = new Discord.MessageEmbed()
+        .setColor(`#80007D`)
         .setImage(`https://i.imgur.com/73AQWna.gif`)
 
         message.channel.send(embed);
