@@ -3,7 +3,7 @@ const {prefix} = require('../config.json')
 module.exports = {
     name:'8ball',
     description:`Ask the might 8ball a qestion and it shall awnser.`,
-    aliases:['eightball','ball'],
+    aliases:['eightball','ball','8bal'],
     usage:`<qestion>`,
     example:`8ball will i ever be happy?`,
     cooldown:5,
