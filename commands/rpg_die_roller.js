@@ -19,49 +19,49 @@ module.exports = {
         switch (args[1]){
             case `6`:
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*6) + 1;
+                    dice = Math.floor(Math.random()*6) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
                 break;
             case '8':
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*8) + 1;
+                    dice = Math.floor(Math.random()*8) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
                     break;
             case '10':
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*10) + 1;
+                    dice = Math.floor(Math.random()*10) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
                     break;
             case '12':
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*12) + 1;
+                    dice = Math.floor(Math.random()*12) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
                     break;
             case '20':
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*20) + 1;
+                    dice = Math.floor(Math.random()*20) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
                     break;
             case '100':
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*100) + 1;
+                    dice = Math.floor(Math.random()*100) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
                     break;
             default:        //d4
                 for (i=0; i<args[0]; i++){
-                    dice = Math.round(Math.random()*4) + 1;
+                    dice = Math.floor(Math.random()*4) + 1;
                     arrs[i] = dice;
                     sum += dice;
                 }
